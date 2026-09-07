@@ -1,0 +1,67 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  color-scheme: dark;
+  --background: #05070d;
+  --foreground: #f8fafc;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+  background: var(--background);
+  color: var(--foreground);
+}
+
+body::before {
+  content: "";
+  position: fixed;
+  inset: 0;
+  z-index: -2;
+  background:
+    radial-gradient(circle at 50% 0%, rgba(34, 211, 238, 0.22), transparent 28rem),
+    radial-gradient(circle at 10% 35%, rgba(163, 230, 53, 0.08), transparent 24rem),
+    linear-gradient(180deg, #05070d 0%, #09111d 48%, #05070d 100%);
+}
+
+body::after {
+  content: "";
+  position: fixed;
+  inset: 0;
+  z-index: -1;
+  pointer-events: none;
+  background-image:
+    linear-gradient(rgba(255, 255, 255, 0.035) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(255, 255, 255, 0.035) 1px, transparent 1px);
+  background-size: 44px 44px;
+  mask-image: linear-gradient(to bottom, black, transparent 72%);
+}
+
+::selection {
+  background: rgba(34, 211, 238, 0.35);
+}
+
+.section-shell {
+  @apply mx-auto w-full max-w-6xl px-5 sm:px-6 lg:px-8;
+}
+
+.panel {
+  @apply rounded-[28px] border border-line bg-white/[0.045] shadow-panel backdrop-blur;
+}
+
+.field {
+  @apply min-h-14 w-full rounded-2xl border border-line bg-white/[0.055] px-4 text-base text-slate-50 outline-none transition placeholder:text-slate-500 focus:border-brand focus:ring-4 focus:ring-brand/15;
+}
+
+.label {
+  @apply text-sm font-medium text-slate-200;
+}
