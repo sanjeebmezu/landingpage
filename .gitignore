@@ -12,3 +12,5 @@ pnpm-debug.log*
 
 *.tsbuildinfo
 next-env.d.ts
+
+*.tar.gz

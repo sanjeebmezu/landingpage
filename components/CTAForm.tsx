@@ -1,7 +1,6 @@
 "use client";
 
 import { FormEvent, useEffect, useState } from "react";
-import { useRouter } from "next/navigation";
 import { Send, ShieldCheck } from "lucide-react";
 
 type FormState = {
@@ -24,8 +23,10 @@ const initialState: FormState = {
   message: ""
 };
 
+const formSubmitEndpoint = "https://formsubmit.co/sanjeebmezu@gmail.com";
+const thankYouUrl = "https://consultation.mezustudio.com/thank-you";
+
 export function CTAForm() {
-  const router = useRouter();
   const [form, setForm] = useState<FormState>(initialState);
   const [errors, setErrors] = useState<Errors>({});
   const [hasHydrated, setHasHydrated] = useState(false);
@@ -65,13 +66,12 @@ export function CTAForm() {
   }
 
   function handleSubmit(event: FormEvent<HTMLFormElement>) {
-    event.preventDefault();
-    if (!validate()) return;
+    if (!validate()) {
+      event.preventDefault();
+      return;
+    }
 
     setIsSubmitting(true);
-    window.setTimeout(() => {
-      router.push("/thank-you");
-    }, 450);
   }
 
   return (
@@ -92,14 +92,20 @@ export function CTAForm() {
         </div>
 
         <form
-          action="/thank-you"
-          method="get"
+          action={formSubmitEndpoint}
+          method="post"
           onSubmit={handleSubmit}
           noValidate={hasHydrated}
           className="grid gap-5"
         >
+          <input type="hidden" name="_subject" value="New AI Marketing Consultation Booking" />
+          <input type="hidden" name="_template" value="table" />
+          <input type="hidden" name="_captcha" value="false" />
+          <input type="hidden" name="_next" value={thankYouUrl} />
+          <input type="text" name="_honey" className="hidden" tabIndex={-1} autoComplete="off" />
           <Field
             id="fullName"
+            name="Full Name"
             label="Full Name"
             placeholder="Enter your full name"
             value={form.fullName}
@@ -109,6 +115,7 @@ export function CTAForm() {
           />
           <Field
             id="email"
+            name="Email"
             label="Active Email"
             placeholder="you@example.com"
             type="email"
@@ -120,6 +127,7 @@ export function CTAForm() {
           <div className="grid gap-5 sm:grid-cols-2">
             <Field
               id="whatsapp"
+              name="WhatsApp Number"
               label="WhatsApp Number"
               placeholder="Your WhatsApp number"
               value={form.whatsapp}
@@ -129,6 +137,7 @@ export function CTAForm() {
             />
             <Field
               id="businessName"
+              name="Business Name"
               label="Business Name"
               placeholder="Your business name"
               value={form.businessName}
@@ -139,6 +148,7 @@ export function CTAForm() {
           </div>
           <Field
             id="website"
+            name="Website or Facebook URL"
             label="Website or Facebook URL"
             placeholder="https://example.com or Facebook page"
             value={form.website}
@@ -151,7 +161,7 @@ export function CTAForm() {
             </label>
             <textarea
               id="message"
-              name="message"
+              name="Message"
               className="field min-h-32 resize-y py-4"
               placeholder="Tell us what you want help with"
               value={form.message}
@@ -178,6 +188,7 @@ export function CTAForm() {
 
 function Field({
   id,
+  name,
   label,
   placeholder,
   value,
@@ -187,6 +198,7 @@ function Field({
   required = false
 }: {
   id: keyof FormState;
+  name: string;
   label: string;
   placeholder: string;
   value: string;
@@ -203,7 +215,7 @@ function Field({
       </label>
       <input
         id={id}
-        name={id}
+        name={name}
         type={type}
         required={required}
         className="field"
