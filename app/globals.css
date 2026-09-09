@@ -65,3 +65,139 @@ body::after {
 .label {
   @apply text-sm font-medium text-slate-200;
 }
+
+.flodesk-dark-wrap {
+  width: 100%;
+}
+
+.flodesk-dark-wrap [data-ff-el="root"].ff-6aa0c15462e13cf23dbbd093,
+.flodesk-dark-wrap [data-ff-el="root"].ff-6aa0c15462e13cf23dbbd093 * {
+  box-sizing: border-box;
+}
+
+.flodesk-dark-wrap [data-ff-el="root"].ff-6aa0c15462e13cf23dbbd093 .ff-6aa0c15462e13cf23dbbd093__container {
+  width: 100%;
+  max-width: none;
+  overflow: hidden;
+  border: 1px solid rgba(148, 163, 184, 0.18);
+  border-radius: 28px;
+  background: linear-gradient(145deg, rgba(15, 23, 42, 0.92), rgba(6, 10, 19, 0.94));
+  box-shadow: 0 22px 70px rgba(0, 0, 0, 0.26);
+}
+
+.flodesk-dark-wrap [data-ff-el="root"].ff-6aa0c15462e13cf23dbbd093 .ff-6aa0c15462e13cf23dbbd093__wrapper {
+  display: flex;
+}
+
+.flodesk-dark-wrap [data-ff-el="root"].ff-6aa0c15462e13cf23dbbd093 .ff-6aa0c15462e13cf23dbbd093__form {
+  width: 100%;
+  margin: 0;
+  padding: 22px;
+  color: #f8fafc;
+  font-family: FlodeskSans, Inter, ui-sans-serif, system-ui, sans-serif;
+  font-size: 16px;
+}
+
+.flodesk-dark-wrap [data-ff-el="root"].ff-6aa0c15462e13cf23dbbd093 .ff-6aa0c15462e13cf23dbbd093__title,
+.flodesk-dark-wrap [data-ff-el="root"].ff-6aa0c15462e13cf23dbbd093 .ff-6aa0c15462e13cf23dbbd093__subtitle {
+  display: none;
+}
+
+.flodesk-dark-wrap [data-ff-el="root"].ff-6aa0c15462e13cf23dbbd093 .ff-6aa0c15462e13cf23dbbd093__fields {
+  display: grid;
+  gap: 14px;
+  margin: 0 0 18px;
+}
+
+.flodesk-dark-wrap [data-ff-el="root"].ff-6aa0c15462e13cf23dbbd093 .ff-6aa0c15462e13cf23dbbd093__field {
+  position: relative;
+  margin: 0;
+}
+
+.flodesk-dark-wrap [data-ff-el="root"].ff-6aa0c15462e13cf23dbbd093 .ff-6aa0c15462e13cf23dbbd093__control {
+  width: 100%;
+  min-height: 56px;
+  border: 1px solid rgba(148, 163, 184, 0.22);
+  border-radius: 18px;
+  background: rgba(255, 255, 255, 0.06);
+  color: #f8fafc;
+  padding: 21px 16px 7px;
+  font-size: 16px;
+  outline: none;
+  transition: border-color 0.2s ease, box-shadow 0.2s ease, background-color 0.2s ease;
+}
+
+.flodesk-dark-wrap [data-ff-el="root"].ff-6aa0c15462e13cf23dbbd093 .ff-6aa0c15462e13cf23dbbd093__control:focus {
+  border-color: #22d3ee;
+  background: rgba(255, 255, 255, 0.08);
+  box-shadow: 0 0 0 4px rgba(34, 211, 238, 0.15);
+}
+
+.flodesk-dark-wrap [data-ff-el="root"].ff-6aa0c15462e13cf23dbbd093 .ff-6aa0c15462e13cf23dbbd093__control::placeholder {
+  color: transparent;
+}
+
+.flodesk-dark-wrap [data-ff-el="root"].ff-6aa0c15462e13cf23dbbd093 .ff-6aa0c15462e13cf23dbbd093__label {
+  position: absolute;
+  top: 8px;
+  left: 16px;
+  margin: 0;
+  color: #94a3b8;
+  font-size: 13px;
+  font-weight: 700;
+  line-height: 1;
+  pointer-events: none;
+}
+
+.flodesk-dark-wrap [data-ff-el="root"].ff-6aa0c15462e13cf23dbbd093 .ff-6aa0c15462e13cf23dbbd093__button {
+  width: 100%;
+  min-height: 56px;
+  cursor: pointer;
+  border: 1px solid #22d3ee;
+  border-radius: 999px;
+  background: #22d3ee;
+  color: #05070d;
+  padding: 14px 22px;
+  font-size: 16px;
+  font-weight: 900;
+  line-height: 1.1;
+  box-shadow: 0 0 30px rgba(34, 211, 238, 0.28);
+  transition: background-color 0.2s ease, transform 0.2s ease;
+}
+
+.flodesk-dark-wrap [data-ff-el="root"].ff-6aa0c15462e13cf23dbbd093 .ff-6aa0c15462e13cf23dbbd093__button:hover {
+  background: #a3e635;
+  transform: translateY(-1px);
+}
+
+.flodesk-dark-wrap [data-ff-el="root"].ff-6aa0c15462e13cf23dbbd093 .fd-form-success,
+.flodesk-dark-wrap [data-ff-el="root"].ff-6aa0c15462e13cf23dbbd093 .ff-6aa0c15462e13cf23dbbd093__success {
+  display: none;
+}
+
+.flodesk-dark-wrap [data-ff-el="root"].ff-6aa0c15462e13cf23dbbd093[data-ff-stage="success"] .fd-form-content {
+  display: none;
+}
+
+.flodesk-dark-wrap [data-ff-el="root"].ff-6aa0c15462e13cf23dbbd093[data-ff-stage="success"] .fd-form-success,
+.flodesk-dark-wrap [data-ff-el="root"].ff-6aa0c15462e13cf23dbbd093[data-ff-stage="success"] .ff-6aa0c15462e13cf23dbbd093__success {
+  display: block;
+}
+
+.flodesk-dark-wrap [data-ff-el="root"].ff-6aa0c15462e13cf23dbbd093 .ff-6aa0c15462e13cf23dbbd093__success-message {
+  border: 1px solid rgba(34, 211, 238, 0.3);
+  border-radius: 22px;
+  background: rgba(34, 211, 238, 0.1);
+  color: #f8fafc;
+  padding: 22px;
+  text-align: center;
+  font-size: 17px;
+  font-weight: 800;
+  line-height: 1.5;
+}
+
+@media (max-width: 767px) {
+  .flodesk-dark-wrap [data-ff-el="root"].ff-6aa0c15462e13cf23dbbd093 .ff-6aa0c15462e13cf23dbbd093__form {
+    padding: 16px;
+  }
+}
