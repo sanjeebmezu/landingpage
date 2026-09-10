@@ -3,7 +3,7 @@ import { CheckCircle2, MessageCircle, Timer } from "lucide-react";
 import { Header } from "@/components/Header";
 import { ThankYouVideo } from "@/components/ThankYouVideo";
 
-const thankYouVideoSrc = "/thank-you-text-video.mp4";
+const thankYouVideoSrc = "/Thank%20you%20video.mp4";
 const whatsappHref =
   "https://wa.me/?text=Hi%20MezuStudio%2C%20I%20booked%20a%20free%20AI%20marketing%20consultation%20and%20I%20have%20a%20question.";
 
