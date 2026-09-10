@@ -5,7 +5,7 @@ import { ThankYouVideo } from "@/components/ThankYouVideo";
 
 const thankYouVideoSrc = "https://www.youtube.com/embed/w8QlstY9Nso?rel=0&modestbranding=1";
 const whatsappHref =
-  "https://wa.me/?text=Hi%20MezuStudio%2C%20I%20booked%20a%20free%20AI%20marketing%20consultation%20and%20I%20have%20a%20question.";
+  "https://wa.me/9779706609788?text=Hi%20MezuStudio%2C%20I%20booked%20a%20free%20AI%20marketing%20consultation%20and%20I%20have%20a%20question.";
 
 export const metadata = {
   title: "You Are Booked"
