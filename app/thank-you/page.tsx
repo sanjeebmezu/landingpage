@@ -1,9 +1,10 @@
 import Link from "next/link";
-import { CheckCircle2, MessageCircle, Timer } from "lucide-react";
+import { CalendarCheck, CheckCircle2, MessageCircle, Timer } from "lucide-react";
 import { Header } from "@/components/Header";
 import { ThankYouVideo } from "@/components/ThankYouVideo";
 
 const thankYouVideoSrc = "https://www.youtube.com/embed/w8QlstY9Nso?rel=0&modestbranding=1";
+const calendlyHref = "https://calendly.com/sanjeebmezu/free-digital-marketing-consultation-call";
 const whatsappHref =
   "https://wa.me/9779706609788?text=Hi%20MezuStudio%2C%20I%20booked%20a%20free%20AI%20marketing%20consultation%20and%20I%20have%20a%20question.";
 
@@ -30,6 +31,22 @@ export default function ThankYouPage() {
 
         <div className="panel mx-auto mt-10 max-w-3xl p-5 sm:p-8">
           <ThankYouVideo src={thankYouVideoSrc} />
+
+          <div className="mt-8 rounded-3xl border border-brand/25 bg-brand/10 p-5 text-center shadow-glow sm:p-7">
+            <CalendarCheck className="mx-auto mb-3 text-brand" size={30} />
+            <h2 className="text-2xl font-black text-white">Choose your call time</h2>
+            <p className="mx-auto mt-3 max-w-xl text-sm leading-6 text-slate-300 sm:text-base">
+              Your request is received. Now book the exact time for your free consultation.
+            </p>
+            <Link
+              href={calendlyHref}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="mt-5 inline-flex min-h-12 items-center justify-center rounded-full bg-brand px-6 text-sm font-black text-ink transition hover:bg-accent"
+            >
+              Book Time on Calendly
+            </Link>
+          </div>
 
           <div className="mt-8 grid gap-4 sm:grid-cols-2">
             <div className="rounded-3xl border border-line bg-white/[0.04] p-5">

@@ -77,6 +77,9 @@ export function CTAForm() {
           <p className="mt-5 text-lg leading-8 text-slate-300">
             One-to-One Consultation. Customized Strategy for Your Business.
           </p>
+          <p className="mt-4 text-sm font-semibold leading-6 text-slate-400">
+            After submitting this form, you will choose your call time on Calendly.
+          </p>
           <div className="mt-6 inline-flex w-fit items-center gap-2 rounded-full border border-brand/20 bg-brand/10 px-4 py-2 text-sm font-semibold text-slate-200">
             <ShieldCheck size={17} className="text-brand" />
             We respect your privacy. No spam.
